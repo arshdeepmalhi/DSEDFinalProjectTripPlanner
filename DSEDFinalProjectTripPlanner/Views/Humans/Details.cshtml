@@ -1,0 +1,69 @@
+﻿@using DSEDFinalProjectTripPlanner.Database
+@model DSEDFinalProjectTripPlanner.Models.Human
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2 style="font-family:cursive; font-size:20px;">Details of Persons</h2>
+
+<div>
+    <h4 style="font-family:cursive; font-size:24px;">Persons</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fullname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fullname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TripId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TripId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FlightId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FlightId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LodgingId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LodgingId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherTransportationId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OtherTransportationId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RestaurantId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RestaurantId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CarRentalId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CarRentalId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityTaskId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ActivityTaskId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <p>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info">Edit</a> |
+        <a asp-area="" asp-controller="Flights" asp-action="Details/@DatabaseManager.FlightId" class="btn btn-warning">Back</a>
+    </p>
+</div>

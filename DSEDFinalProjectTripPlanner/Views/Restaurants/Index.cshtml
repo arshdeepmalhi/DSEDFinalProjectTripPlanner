@@ -1,0 +1,59 @@
+﻿@using DSEDFinalProjectTripPlanner.Database
+@model IEnumerable<DSEDFinalProjectTripPlanner.Models.Restaurant>
+
+@{ ViewData["Title"] = "Index";
+                ViewData["Header"] = "Restaurant Reservations"; }
+
+<div class="header">
+    <h1 style="font-family:cursive; font-size:24px;">@ViewData["Header"]</h1>
+</div>
+<hr />
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<!-- Table For Restaurant booking on Trip-->
+@foreach (var restaurant in Model.OrderBy(restaurant => restaurant.Date).ThenBy(restaurant => restaurant.Time))
+{
+<div class="col-md-12">
+    <hr />
+    <div class="col-md-3">
+        <div class="lodgingName">
+            <h3>
+                <a asp-action="Details" asp-route-id="@restaurant.Id">
+                    @Html.DisplayFor(modelItem => restaurant.RestaurantName)
+                </a>
+            </h3>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <p>
+            @Html.DisplayFor(modelItem => restaurant.Address),
+            @if (restaurant.Suburb != null)
+            {
+@Html.DisplayFor(modelItem => restaurant.Suburb)<text>,</text>                }
+            @Html.DisplayFor(modelItem => restaurant.City),
+            @if (restaurant.Postcode != null)
+            {
+@Html.DisplayFor(modelItem => restaurant.Postcode)<text>,</text>                }
+            <br />
+            @Html.DisplayFor(modelItem => restaurant.Region),
+            @Html.DisplayFor(modelItem => restaurant.Country)
+        </p>
+    </div>
+    <div class="col-md-3">
+        <p>
+            <span class="bold">Reservation:</span>
+            @DatabaseManager.StartDate(restaurant.Date) &#64;
+            @DatabaseManager.ArrivalTime(restaurant.Time)<br />
+
+        </p>
+    </div>
+    <div class="col-md-12 detailslinks">
+        <p>
+            <a asp-action="Edit" asp-route-id="@restaurant.Id" class="btn btn-info">Edit</a> |
+            <a asp-action="Details" asp-route-id="@restaurant.Id" class="btn btn-warning">Details</a> |
+            <a asp-action="Delete" asp-route-id="@restaurant.Id" class="btn btn-danger">Delete</a>
+        </p>
+    </div>
+</div>}
+

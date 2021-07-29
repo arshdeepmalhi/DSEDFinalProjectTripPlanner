@@ -1,0 +1,312 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #f7cbdd;
+    background-image: url("../images/7.jpg");
+}
+
+
+
+.row {
+    padding: 15px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: peachpuff;
+    opacity: 0.9;
+    max-width: 1500px;
+}
+
+.col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-6, .col-md-4, .col-md-3, .col-md-2, .col-md-1 {
+    padding: 0px;
+    padding-right: 2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: #f5671b;
+    margin: 5px;
+}
+
+
+p, label, table, dt, dd {
+    color: #000000;
+    text-align: left;
+    margin: 5px;
+}
+
+hr {
+    margin: 5px;
+}
+
+a {
+    color: #577C68;
+}
+
+    a:hover {
+        color: #B5945C;
+        text-decoration: none;
+    }
+
+.btn {
+    color: #fff;
+    background-color: #286090;
+}
+
+    .btn:hover {
+        color: #fff;
+        background-color: #bbf0d7;
+    }
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+/* Header */
+.header {
+    text-align: center;
+}
+
+    .header p {
+        text-align: center;
+    }
+
+
+.clear {
+    clear: both;
+}
+
+.required {
+    color: red;
+}
+
+.text-danger {
+    color: red;
+}
+
+.destination p {
+    /*background-color: gray;*/
+    text-align: center;
+}
+
+#hidden {
+    display: none;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.close {
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: gray;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.modal-header {
+    padding: 2px;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+
+
+.details h3, h4, h5, p {
+    text-align: left;
+    color: #000000;
+}
+
+.links p {
+    text-align: center;
+}
+
+.detailslinks p {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.checkinout {
+    font-weight: bolder;
+    font-size: 20pt;
+    font-style: italic;
+}
+
+.large {
+    font-weight: bolder;
+    font-size: 20pt;
+    font-style: italic;
+}
+
+.passengers h4 {
+    color: #000000;
+    text-align: left;
+}
+
+.lodgingName p {
+    text-align: center;
+}
+
+.lodgingName h3 {
+    margin: 0px;
+}
+
+.date {
+    background-color: #f5edb0;
+    padding: 5px;
+    overflow: hidden;
+    margin: 5px;
+}
+
+    .date h3 {
+        text-align: left;
+        color: #f5671b;
+    }
+
+    .date p {
+        text-align: right;
+        vertical-align: middle;
+    }
+
+.othertransportations {
+    overflow: hidden;
+    background-color: #f5eea4;
+    margin: 10px 10px 0px 10px;
+}
+
+.flights {
+    overflow: hidden;
+    background-color: #ddf5a4;
+    margin: 10px 10px 0px 10px;
+}
+
+.lodgings {
+    overflow: hidden;
+    background-color: #b2f7c6;
+    margin: 10px 10px 0px 10px;
+}
+
+.activityTasks {
+    overflow: hidden;
+    background-color: #b2f7d2;
+    margin: 10px 10px 0px 10px;
+}
+
+.carRentals {
+    overflow: hidden;
+    background-color: #ccfcfa;
+    margin: 10px 10px 0px 10px;
+}
+
+.restaurants {
+    overflow: hidden;
+    background-color: #eaccfc;
+    margin: 10px 10px 0px 10px;
+}
+
+.image-responsive {
+    width: 80%;
+    height: auto;
+    padding: 10px;
+}
+
+#dropoffaddress {
+    display: none;
+}
+.footer {
+    
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}

@@ -1,0 +1,86 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>aspnet-DSEDFinalProjectTripPlanner-27F5BFFD-CC55-4923-BB1D-98D5F0F173A8</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\**" />
+    <Content Remove="Pages\**" />
+    <EmbeddedResource Remove="Pages\**" />
+    <None Remove="Pages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20180514024108_init.cs" />
+    <Compile Remove="Migrations\20180514024108_init.Designer.cs" />
+    <Compile Remove="Migrations\20180514031257_init.cs" />
+    <Compile Remove="Migrations\20180514031257_init.Designer.cs" />
+    <Compile Remove="Migrations\20180514043515_shortdates.cs" />
+    <Compile Remove="Migrations\20180514043515_shortdates.Designer.cs" />
+    <Compile Remove="Migrations\20180515212753_init.cs" />
+    <Compile Remove="Migrations\20180515212753_init.Designer.cs" />
+    <Compile Remove="Migrations\20180521034151_TripId.cs" />
+    <Compile Remove="Migrations\20180521034151_TripId.Designer.cs" />
+    <Compile Remove="Migrations\20180524020804_human.cs" />
+    <Compile Remove="Migrations\20180524020804_human.Designer.cs" />
+    <Compile Remove="Migrations\20180524021517_init.cs" />
+    <Compile Remove="Migrations\20180524021517_init.Designer.cs" />
+    <Compile Remove="Migrations\20180524060718_fullname.cs" />
+    <Compile Remove="Migrations\20180524060718_fullname.Designer.cs" />
+    <Compile Remove="Migrations\20180524061021_init.cs" />
+    <Compile Remove="Migrations\20180524061021_init.Designer.cs" />
+    <Compile Remove="Migrations\20180524061720_human.cs" />
+    <Compile Remove="Migrations\20180524061720_human.Designer.cs" />
+    <Compile Remove="Migrations\20180524090949_human2.cs" />
+    <Compile Remove="Migrations\20180524090949_human2.Designer.cs" />
+    <Compile Remove="Migrations\20180524092713_init.cs" />
+    <Compile Remove="Migrations\20180524092713_init.Designer.cs" />
+    <Compile Remove="Migrations\20180524093744_init.cs" />
+    <Compile Remove="Migrations\20180524093744_init.Designer.cs" />
+    <Compile Remove="Migrations\20180529051408_init.cs" />
+    <Compile Remove="Migrations\20180529051408_init.Designer.cs" />
+    <Compile Remove="Migrations\20180529051624_init.cs" />
+    <Compile Remove="Migrations\20180529051624_init.Designer.cs" />
+    <Compile Remove="Migrations\20180529205016_lodgingname.cs" />
+    <Compile Remove="Migrations\20180529205016_lodgingname.Designer.cs" />
+    <Compile Remove="Migrations\20180529205235_init.cs" />
+    <Compile Remove="Migrations\20180529205235_init.Designer.cs" />
+    <Compile Remove="Migrations\20180529234639_init.cs" />
+    <Compile Remove="Migrations\20180529234639_init.Designer.cs" />
+    <Compile Remove="Migrations\20180530002507_otconfirmationnum.cs" />
+    <Compile Remove="Migrations\20180530002507_otconfirmationnum.Designer.cs" />
+    <Compile Remove="Migrations\20180531204215_activitytask.cs" />
+    <Compile Remove="Migrations\20180531204215_activitytask.Designer.cs" />
+    <Compile Remove="Migrations\20180531204748_trip.cs" />
+    <Compile Remove="Migrations\20180531204748_trip.Designer.cs" />
+    <Compile Remove="Migrations\20180601000727_checkbox.cs" />
+    <Compile Remove="Migrations\20180601000727_checkbox.Designer.cs" />
+    <Compile Remove="Migrations\20180601001050_trip.cs" />
+    <Compile Remove="Migrations\20180601001050_trip.Designer.cs" />
+    <Compile Remove="Migrations\20180601011746_car.cs" />
+    <Compile Remove="Migrations\20180601011746_car.Designer.cs" />
+    <Compile Remove="Migrations\20180602050652_todo.cs" />
+    <Compile Remove="Migrations\20180602050652_todo.Designer.cs" />
+    <Compile Remove="Migrations\20180602051416_todolist.cs" />
+    <Compile Remove="Migrations\20180602051416_todolist.Designer.cs" />
+    <Compile Remove="Migrations\20180602062746_todolistitem.cs" />
+    <Compile Remove="Migrations\20180602062746_todolistitem.Designer.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Humanizer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.2" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.1" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+</Project>

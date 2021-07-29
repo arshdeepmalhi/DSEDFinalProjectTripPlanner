@@ -1,0 +1,91 @@
+﻿@using DSEDFinalProjectTripPlanner.Database
+@model DSEDFinalProjectTripPlanner.Models.Restaurant
+
+@{
+    ViewData["Title"] = "Delete";
+    ViewData["Header"] = "Delete this Restaurant Reservation?";
+}
+
+<div class="header">
+    <h1 style="font-family:cursive; font-size:24px;">@ViewData["Header"]</h1>
+</div>
+<hr />
+<div>
+    <div class="col-md-12">
+        <div class="col-md-3">
+            <div class="details">
+                <h3>
+                    @Html.DisplayFor(model => model.RestaurantName)
+                </h3>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <p>
+                @Html.DisplayFor(model => model.Address),
+                @if (Model.Suburb != null)
+                {
+                    @Html.DisplayFor(model => model.Suburb)<text>,</text>
+                }
+                @Html.DisplayFor(model => model.City),
+                @if (Model.Postcode != null)
+                {
+                    @Html.DisplayFor(model => model.Postcode)<text>,</text>
+                }
+                <br />
+                @Html.DisplayFor(model => model.Region),
+                @Html.DisplayFor(model => model.Country)
+            </p>
+        </div>
+        <div class="col-md-3">
+            <p>
+                <span class="bold">Reservation:</span>
+                @DatabaseManager.StartDate(Model.Date) &#64; @* &#64; - symbol for @ *@
+                @DatabaseManager.ArrivalTime(Model.Time)<br />
+                Confirmation #: @Html.DisplayFor(model => model.ConfirmationNumber)
+            </p>
+        </div>
+        <div class="col-md-2">
+            <p>
+                @if (Model.NumberInParty > 0)
+                {
+                    <span class="bold"># in party:</span>
+                    @Html.DisplayFor(model => model.NumberInParty)<text><br /></text>
+                }
+                @if (Model.HoursOfOperation != null)
+                {
+                    <span class="bold">Hours of operation:</span>
+                    @Html.DisplayFor(model => model.HoursOfOperation)<br />
+                }
+                @if (Model.PriceRange != null)
+                {
+                    <span class="bold">Price Range:</span>
+                    @Html.DisplayFor(model => model.PriceRange)<br />
+                }
+                @if (Model.DressCode != null)
+                {
+                    <span class="bold">Dress code:</span>
+                    @Html.DisplayFor(model => model.DressCode)<br />
+                }
+                @if (Model.Cuisine != null)
+                {
+                    <span class="bold">Cuisine:</span>
+                    @Html.DisplayFor(model => model.Cuisine)<br />
+                }
+
+            </p>
+        </div>
+        @if (Model.Description != null)
+        {
+            <div class="col-md-12">
+                @Html.DisplayFor(model => model.Description)
+            </div>
+        }
+    </div>
+</div>
+<div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-area="" asp-controller="Trips" asp-action="Details/@DatabaseManager.TripId" class="btn btn-warning">Back</a>
+    </form>
+</div>
