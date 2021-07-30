@@ -2,7 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-color: #f7cbdd;
-    background-image: url("../images/7.jpg");
+   /* background-image: url("../images/7.jpg");*/
 }
 
 
@@ -16,7 +16,6 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    background-color: peachpuff;
     opacity: 0.9;
     max-width: 1500px;
 }
@@ -30,6 +29,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: #f5671b;
     margin: 5px;
+    font-weight:bold;
 }
 
 
@@ -43,9 +43,9 @@ hr {
     margin: 5px;
 }
 
-a {
+/*a {
     color: #577C68;
-}
+}*/
 
     a:hover {
         color: #B5945C;
@@ -54,7 +54,7 @@ a {
 
 .btn {
     color: #fff;
-    background-color: #286090;
+    
 }
 
     .btn:hover {
@@ -189,7 +189,7 @@ a {
     }
 
 .modal-header {
-    padding: 2px;
+    padding: 3px;
 }
 
 .modal-body {
@@ -304,9 +304,11 @@ a {
     display: none;
 }
 .footer {
-    
+    text-align:center;
     bottom: 0;
     width: 100%;
+    color:black;
+    font-size:20px;
     white-space: nowrap;
     line-height: 60px; /* Vertically center the text there */
 }
